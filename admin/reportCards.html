@@ -231,19 +231,20 @@ let sectionRef = doc(db, schoolId, "section");
       <h3>TERMINAL REPORT</h3>
       <table class="student-info-table">
       <tr class="std-name">      
-        <td colspan="2">NAME: ${std.name.toUpperCase()}</td>
+        <td>NAME: ${std.name.toUpperCase()}</td>
+        <td>GENDER: ${std.gender}</td>
       </tr>
       <tr>
-      <td>GENDER: ${std.gender}</td>
+      <td>TERM: 1<sup>st</sup></td>
       <td>CLASS: ${classSelect.value}</td>
       </tr>
       <tr>    
-      <td>SESSION: ${sessionSelect.value}</td>
-      <td>RESUMPTION DATE: <strong><time>5<sup>th</sup> JANUARY, 2026</time></strong></td>
+      <td>SESSION: ${sessionSelect.value.split(",")[0]}</td>
+      <td>RESUMPTION: <strong><time>5<sup>th</sup> JANUARY, 2026</time></strong></td>
       </tr>
       <tr>
-      <td>NUMBER IN CLASS: ${students.length}</td>      
-      <td>POSITION: ${std.position}</td>
+      <td>NO: IN CLASS: ${students.length}</td>      
+      <td style="font-weight: bolder">POSITION: ${std.position}</td>
       </tr>
       </table>   
       </caption>
