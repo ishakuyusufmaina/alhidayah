@@ -211,11 +211,11 @@ let sectionRef = doc(db, schoolId, "section");
       <header>
       <h2>مدرسة الهداية الإسلامية</h2>
       <h3>AL-HIDAYAH ISLAMIC SCHOOL</h3>
-      <h4 style="color:red">Nursery, Primary, Islamiya and Secondary</h4>
+      <h4 style="color:red">Nursery, Primary and Secondary</h4>
       <address>
       P.O Box 1726, Bolori Ward, Opposite Yemi Osinbanjo Mega Primary School, Baga Road, Maiduguri Borno State
             <br>
-      <i>kaunaschool@gmail.com</i>
+      <i>alhidayahislamicschool001@gmail.com</i>
       </address>
       </header>
       <div id="logo-container">
@@ -231,7 +231,7 @@ let sectionRef = doc(db, schoolId, "section");
       <h3>TERMINAL REPORT</h3>
       <table class="student-info-table">
       <tr class="std-name">      
-        <td colspan="2">NAME OF PUPIL: ${std.name.toUpperCase()}</td>
+        <td colspan="2">NAME: ${std.name.toUpperCase()}</td>
       </tr>
       <tr>
       <td>GENDER: ${std.gender}</td>
@@ -649,6 +649,7 @@ text-align: center;
     table {
   border-collapse: collapse;
   width: 100%;
+      margin: auto;
 }
 
 table th, table td {
@@ -674,6 +675,10 @@ table tr:nth-child(odd) {
 
   .n, .c {
     display: none;
+  }
+
+  .student-info-table {
+    text-transform: uppercase;
   }
     
   </style>
