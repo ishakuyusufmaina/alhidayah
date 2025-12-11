@@ -189,7 +189,10 @@ let sectionRef = doc(db, schoolId, "section");
       let subjects = student.subjects;
       
       for (const subj in subjects) {
-        if (!sectSubjs.includes(subj)) continue;
+        if (!sectSubjs.includes(subjects[subj][termIndex].name)){
+          delete subjects[subj]
+          continue;
+        }
         console.log(JSON.stringify(subjects[subj]))
         try {
           let test1 = Number(subjects[subj][termIndex].test1 ?? 0);
@@ -264,7 +267,7 @@ let sectionRef = doc(db, schoolId, "section");
       let subKeys = Object.keys(subjects).sort().reverse();
       //for (const subj in subjects) {
       subKeys.forEach(subj=>{
-        if (!sectSubjs.includes(subj)) return;
+       // if (!sectSubjs.includes(subj)) return;
       let t1= Number(subjects[subj][termIndex].test1 ?? 0);
       let t2 = Number(subjects[subj][termIndex].test2 ?? 0);
       let t3 = Number(subjects[subj][termIndex].test3 ?? 0);
