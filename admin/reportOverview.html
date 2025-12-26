@@ -469,8 +469,10 @@ let hElm = document.createElement("th");
              for (let subj in subjects){
                 let test1 = Number(subjects[subj][termIndex].test1 ?? 0);
                 let test2 = Number(subjects[subj][termIndex].test2 ?? 0);
+                let test3 = Number(subjects[subj][termIndex].test3 ?? 0);
+               // let test2 = Number(subjects[subj][termIndex].test2 ?? 0);     
                 let exam = subjects[subj][termIndex].exam
-                let total = test1 + test2 + Number(exam)
+                let total = test1 + test2 + test3 + Number(exam)
                  totals += "<td>" + total + "</td>";
              }
           return totals + "<td>"+ std.score + "</td>" + "<td>"+ std.position + "</td>";
