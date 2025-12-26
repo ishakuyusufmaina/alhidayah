@@ -171,6 +171,9 @@ hr {
   .no-print {
     display: none;
   }
+  th {
+    border: 1px solid black !important;
+  }
 }
 
 /* ===== MOBILE TWEAKS ===== */
@@ -391,7 +394,9 @@ if (sessionsDoc.exists()){
         try {
          let t1 = Number(subjects[subj][termIndex].test1 ?? 0);
          let t2 = Number(subjects[subj][termIndex].test2 ?? 0);
-          student.score += t1+t2 + Number(subjects[subj][termIndex].exam);
+          let t3 = Number(subjects[subj][termIndex].test3 ?? 0);
+
+          student.score += t1+t2+t3 + Number(subjects[subj][termIndex].exam);
           subHeads.add(subjects[subj][termIndex].name);
           
         } catch(e) {
@@ -430,7 +435,9 @@ let hElm = document.createElement("th");
              for (let subj in subjects){
                 let t1 = Number(subjects[subj][termIndex].test1 ?? 0);
                 let t2 = Number(subjects[subj][termIndex].test2 ?? 0);
-                tests += "<td>"+(t1+t2)+"</td>";
+                let t3 = Number(subjects[subj][termIndex].test3 ?? 0);
+    
+                tests += "<td>"+(t1+t2+t3)+"</td>";
              }
           return tests + "<td> - </td> <td> - </td>";
              
