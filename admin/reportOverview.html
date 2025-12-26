@@ -126,10 +126,14 @@ text-align: center;
   </style>
 </head>
 <body>
+ 
   <h1>
    Result and Position
   </h1>
-   <div class="select-container">
+ <div class="no-print">
+    <button id="print" onclick="window.print()">Download</button>
+  </div>
+ <div class="select-container">
    <select id="sessionSelect">
     <option> -select session- </option>
   </select>
@@ -437,7 +441,12 @@ let hElm = document.createElement("th");
   
   
   
-  
+    @media print {
+    
+    .no-print {
+      display: none;
+    }
+    }
   </script>
 </body>
 </html>
